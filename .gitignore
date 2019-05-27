@@ -1,0 +1,5 @@
+.terraform
+.idea
+terraform.tfstate*
+keys/
+aws-auth.yaml
