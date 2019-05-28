@@ -1,0 +1,14 @@
+version: 0.2
+
+# theoretically thecodebuild service account can handle this
+# but we can create a role for terraform to assume that would be awesome
+phases:
+  install:
+    commands:
+      - terraform init
+  pre_build:
+    commands:
+      - terraform validate
+  build:
+    commands:
+      - terraform plan -no-color
